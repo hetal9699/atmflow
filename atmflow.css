@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.h200{
+    height: 500px;
+}
+#eng{
+    display: none;
+}
+#menu{
+    display:none
+}
+#banking{
+    display: none;
+}
+#withdraw{
+    display: none;
+}
+#acctype{
+    display: none;
+}
+#msg{
+    display: none;
+}

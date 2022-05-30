@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="atmflow.css">
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container w-50 d-flex justify-content-center my-5 text-center border border-1 border-secondary h200 bg-primary p-4">
+        <div id="home">
+            <h1 id="heading" class="text-white"> please select any labguage</h1>
+            <button type="button" onclick="english()" class="btn btn-light px-4 py-2 text-black">English</button>
+            <button type="button" onclick="hindi()" class="btn btn-light px-4 py-2 text-black">Hindi</button>
+        </div>
+
+        <div id="eng">
+            <h2 class="text-white"> please enter numbers between 1 to 100</h2>
+            <input type="text" id="number">
+            <button type="button" onclick="enter()" class="btn btn-light px-4 py-2 text-black"> enter</button>
+        </div>
+        <div id="menu">
+            <button type="button" onclick="banking()" class="btn btn-light px-4 py-2 text-black">Banking</button>
+            <button class="btn btn-light px-4 py-2 text-black">Balance inqury</button>
+            <button class="btn btn-light px-4 py-2 text-black">Ministatement</button>
+        </div>
+        <div id="banking">
+            <button type="button" onclick="withdraw()" class="btn btn-light px-4 py-2 text-black">
+                withdraw
+            </button>
+            <button type="button" onclick="deposit()"class="btn btn-light px-4 py-2 text-black">
+                deposit
+            </button>
+        </div>
+        <div id="withdraw">
+            <h2 class="text-white">please enter ant amount</h2>
+            <input type="text" id="rs">
+            <button type="button" onclick="amt()" class="btn btn-light px-4 py-2 text-black">Enter</button>
+        </div>
+        <div id="acctype">
+            <button type="button" onclick="current()" class="btn btn-light px-4 py-2 text-black">current</button>
+            <button type="button" onclick="saving()" class="btn btn-light px-4 py-2 text-black">saving</button>
+
+        </div>
+        <h2 id="msg" class="text-white">Your Transaction is being process</h2>
+
+
+    </div>
+    <script>
+        function english() {
+            document.getElementById("eng").style.display = "block";
+            document.getElementById("home").style.display = "none";
+        }
+        function enter() {
+            document.getElementById("eng").style.display = "none";
+            document.getElementById("menu").style.display = "block";
+        }
+        function banking() {
+            document.getElementById("menu").style.display = "none";
+            document.getElementById("banking").style.display = "block";
+        }
+        function withdraw() {
+            document.getElementById("banking").style.display = "none";
+            document.getElementById("withdraw").style.display = "block";
+        }
+        function amt() {
+            document.getElementById("withdraw").style.display = "none";
+
+            document.getElementById("acctype").style.display = "block";
+        }
+        function saving() {
+            document.getElementById("withdraw").style.display = "none";
+            document.getElementById("acctype").style.display = "none";
+            document.getElementById("msg").style.display = "block";
+        }
+    </script>
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+
+</html>
